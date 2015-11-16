@@ -1,0 +1,30 @@
+{
+  "name": "state-mutate",
+  "version": "0.0.1",
+  "description": "A sane state handling library (for React)",
+  "main": "index.js",
+  "dependencies": {
+    "babel-runtime": "^5.8.29"
+  },
+  "devDependencies": {
+    "babel": "^5.8.29"
+  },
+  "scripts": {
+    "compile": "./node_modules/.bin/babel -o index.js index.es6.js",
+    "prepublish": "npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digitalegarage/state-mutate.git"
+  },
+  "keywords": [
+    "state",
+    "react"
+  ],
+  "author": "Bayerischer Rundfunk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/digitalegarage/state-mutate/issues"
+  },
+  "homepage": "https://github.com/digitalegarage/state-mutate#readme"
+}
