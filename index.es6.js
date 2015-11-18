@@ -35,14 +35,14 @@ export default class Store {
 
             const sideEffectPromise = sideEffect();
 
-            sideEffectPromise.then(
-                (result) => {
-                    this.handleActionResult(subtree, successAction(this.state, result), doneCallback)
-                },
-                (error) => {
-                    this.handleActionResult(subtree, failureAction(this.state, error), doneCallback)
-                }
-            )
+            sideEffectPromise
+            .then(
+                result => this.handleActionResult(subtree, successAction(this.state[subtree], result), doneCallback),
+                error => this.handleActionResult(subtree, failureAction(this.state[subtree], error), doneCallback))
+            .catch(exceptionInSuccessOrFailureAction => {
+                // prevent the promise from swallowing the exception, we should definitely crash
+                setTimeout(() => {throw exceptionInSuccessOrFailureAction;}, 0)
+            });
         } else {
             if (doneCallback) doneCallback();
         }
