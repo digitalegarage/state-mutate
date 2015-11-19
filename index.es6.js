@@ -1,11 +1,11 @@
 export default class Store {
-    constructor (subtreeToMutatorMap) {
-        this.state = {};
+    constructor (subtreeToMutatorMap, initialState) {
+        this.state = initialState || {};
         this.listeners = [];
         this.mutate = {};
 
         for (let [subtree, mutator] of pairs(subtreeToMutatorMap)) {
-            this.state[subtree] = mutator.initialState();
+            if (!initialState) this.state[subtree] = mutator.initialState();
 
             this.mutate[subtree] = {};
 
