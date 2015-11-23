@@ -50,6 +50,11 @@ export default class Store {
 
     subscribe (listener) {
         this.listeners.push(listener);
+        return listener;
+    }
+
+    unsubscribe (listener) {
+        this.listeners.splice(this.listeners.indexOf(listener), 1);
     }
 }
 

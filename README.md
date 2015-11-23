@@ -6,7 +6,7 @@ A mix of 'not invented here'-syndrome and the illusion that [redux](https://gith
 
 ## Goals
 
-- Minimalism (60 LOC!)
+- Minimalism (65 LOC!)
 - Naming that tries to be helpful
 - Declarative and terse API
 - Asynchronous actions chains built-in
