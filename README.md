@@ -1,6 +1,6 @@
 # state-mutate
 
-## A sane state handling library (for React)
+## A minimal state handling library (for React)
 
 A mix of 'not invented here'-syndrome and the illusion that [redux](https://github.com/rackt/redux) can reduced (heh!) to something more understandable.
 
@@ -120,34 +120,3 @@ A mix of 'not invented here'-syndrome and the illusion that [redux](https://gith
             // => [{id: 4783, title: "An Article", ...}, ...]
         }
         ```
-
-
-### Recommended React Patterns
-
-1. **Connectors** map global state and mutators to components and their properties</br>and make server-side pre-loading & -rendering possible.
-
-    ```javascript
-    const articleConnector = {
-        
-        connect (state, mutate) {
-            const loadMore = () => mutate.articles.load();
-            
-            return <div>
-                <ArticleList articles={state.articles.articles}/>
-                {state.loading
-                    ? "Loading..."
-                    : <button onClick={loadMore}>Load More</button>}
-            </div>
-        }
-        
-        fetchInitialData (state, mutate, done) {
-            if (state.articles.articles.length === 0)
-                mutate.articles.load(null, done);
-            else
-                done();
-        }
-        
-    }
-    ```
-
-2. **A Top-Level `App` Component** that owns the store</br>and renders Connectors with it (based on routes, for example)</br>TODO...

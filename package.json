@@ -1,7 +1,10 @@
 {
   "name": "state-mutate",
-  "version": "0.0.1",
-  "description": "A sane state handling library (for React)",
+  "version": "0.1.0",
+  "description": "A minimal state handling library (for React)",
+  "keywords": ["minimal", "react", "state", "store", "universal"],
+  "author": "Anselm Eickhoff <anselm.eickhoff@br.de>",
+  "license": "MIT",
   "main": "index.js",
   "dependencies": {
     "babel-runtime": "^5.8.29"
@@ -17,12 +20,6 @@
     "type": "git",
     "url": "git+https://github.com/digitalegarage/state-mutate.git"
   },
-  "keywords": [
-    "state",
-    "react"
-  ],
-  "author": "Bayerischer Rundfunk",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/digitalegarage/state-mutate/issues"
   },
