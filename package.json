@@ -2,7 +2,13 @@
   "name": "state-mutate",
   "version": "0.1.0",
   "description": "A minimal state handling library (for React)",
-  "keywords": ["minimal", "react", "state", "store", "universal"],
+  "keywords": [
+    "minimal",
+    "react",
+    "state",
+    "store",
+    "universal"
+  ],
   "author": "Anselm Eickhoff <anselm.eickhoff@br.de>",
   "license": "MIT",
   "main": "index.js",
@@ -13,7 +19,7 @@
     "babel": "^5.8.29"
   },
   "scripts": {
-    "compile": "./node_modules/.bin/babel -o index.js index.es6.js",
+    "compile": "./node_modules/.bin/babel -o index.js index.es6.js --optional runtime",
     "prepublish": "npm run compile"
   },
   "repository": {
