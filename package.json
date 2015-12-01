@@ -1,6 +1,6 @@
 {
   "name": "state-mutate",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A minimal state handling library (for React)",
   "keywords": [
     "minimal",
